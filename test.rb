@@ -1,4 +1,7 @@
 require 'tidyhqrb'
 
-contacts = Tidyhqrb::Client.new.contacts.all(access_token: 'c5dfe64e17444f15ccdda20fbef6286a31c6a4850db300a6e338f561b4604dd5')
+Tidyhq::Client.auth_token = 'd6f55957f99f79333a69e3de48337d223524f697214ed27a228ba1a19d50fd8a'
+contacts = Tidyhq::Client.new.contacts.all do |req|
+  puts req.class
+end
 puts contacts.collect(&:attributes).flatten

@@ -1,2 +1,2 @@
 require "tidyhqrb/version"
-require 'tidyhqrb/client'
+require 'tidyhq/client'
