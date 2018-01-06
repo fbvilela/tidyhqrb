@@ -1,2 +1,3 @@
 require "tidyhqrb/version"
-require 'tidyhq/client'
+require "tidyhqrb/restroom_patches"
+require "tidyhqrb/client"
