@@ -1,4 +1,6 @@
 require 'restroom'
+require 'tidyhqrb/contact'
+require 'tidyhqrb/order'
 require 'tidyhqrb/product'
 
 module Tidyhqrb
@@ -6,6 +8,8 @@ module Tidyhqrb
     include Restroom
 
     restroom 'https://api.tidyhq.com', base_path: 'v1' do
+      exposes :contacts, model: Contact, id: :id
+      exposes :orders, model: Order, base_path: 'shop', id: :id
       exposes :products, model: Product, base_path: 'shop', id: :id
     end
 
