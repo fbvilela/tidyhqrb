@@ -13,7 +13,7 @@ module Tidyhqrb
       {
         id: id,
         name: name,
-        sell_category_id: sell_category_id
+        sell_category_id: sell_category_id,
         sell_price: sell_price
       }.to_json(*opt)
     end
