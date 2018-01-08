@@ -7,7 +7,7 @@ module Tidyhqrb
     attribute :id, String
     attribute :name, String
     attribute :sell_category_id, Integer
-    attribute :sell_price, Integer
+    attribute :sell_price, Float
 
     def to_json(*opt)
       {
