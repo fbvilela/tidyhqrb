@@ -16,6 +16,10 @@ module RestroomProxyExtensions
       super
     end
   end
+
+  def delete key
+    !!response_filter.call(:singular, request(:delete, singular_path(key), {}))
+  end
 end
 
 module Restroom

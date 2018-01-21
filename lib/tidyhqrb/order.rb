@@ -8,12 +8,14 @@ module Tidyhqrb
     attribute :product_id, String
     attribute :variant_id, Integer
     attribute :quantity, Integer
+    attribute :created_at, DateTime
 
     def to_json(*opt)
       {
         product_id: product_id,
         variant_id: variant_id,
-        quantity: quantity
+        quantity: quantity,
+        created_at: created_at
       }.to_json(*opt)
     end
   end
@@ -33,7 +35,7 @@ module Tidyhqrb
         contact_id: contact_id,
         number: number,
         created_at: created_at,
-        products: products
+        products: products,
       }.to_json(*opt)
     end
   end
